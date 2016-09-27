@@ -8,10 +8,17 @@
     "url": "https://github.com/nicolastrres/GithubField"
   },
   "scripts": {
-    "build": "webpack --colors --watch"
+    "build": "webpack --colors --watch",
+    "test": "mocha --require ./testDom.js --recursive './{,!(node_modules)/**/}*.spec.js'"
   },
   "author": "nicolastrres@gmail.com",
   "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "enzyme": "^2.4.1",
+    "mocha": "^3.0.2",
+    "react-addons-test-utils": "^15.3.2"
+  },
   "dependencies": {
     "babel-cli": "^6.11.4",
     "babel-core": "^6.10.4",
